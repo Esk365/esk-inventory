@@ -28,7 +28,7 @@ class UserController extends Controller
         );
         if (Auth::attempt($userdata)) {
             if(Auth::User()->role == 'user'){
-                return redirect("home");
+                return redirect("/dashboard/home");
             }else{
                 return redirect("/admin/home");
             }
